@@ -1,0 +1,13 @@
+.v-header-logo {
+  width: 10%;
+}
+
+.v-header-nav {
+  width: 70%;
+}
+
+.v-header-login {
+  width: 20%;
+  float: right;
+  text-align: right;
+}
