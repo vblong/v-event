@@ -11,3 +11,16 @@
   float: right;
   text-align: right;
 }
+
+.v-header-login-item {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 10px;
+  transition: all .5s ease;
+}
+
+.v-header-login-item:hover {
+  color: #000;
+  background-color: #ffffff;
+}
