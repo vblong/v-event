@@ -3,86 +3,55 @@
 
     <!-- Title -->
     <div class="jumbotron">
-      <h1>Shaiya Shade Events</h1>
-      <h5>by vblong</h5>
+      <h1>{{shadeEvent.name}}</h1>
+      <h5>by <a href="/{{shadeEvent.creator.id}}">{{shadeEvent.creator.name}}</a></h5>
     </div>
 
-    <!-- Description -->
-    <div class="v-container-description">
-      About TODO
-    </div>
+    <div class="v-container-info">
+      <!-- Description -->
+      <div class="v-container-description">
+        <h3>Description</h3>
+        {{shadeEvent.description}}
+      </div>
 
-    <!-- Details -->
-    <div class="v-container-details">
-      <table class="table table-responsive table-dark table-striped table-hover">
-        <thead>
-          <tr>
-            <th>Date</th>
-            <th>Time</th>
-            <th>Location</th>
-            <th>Duration</th>
-            <th></th>
-          </tr>
-        </thead>
+      <!-- Details -->
+      <div class="v-container-details">
+        <h3>Schedule</h3>
+        <table class="table table-responsive table-dark table-striped table-hover">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Event Time</th>
+              <th>Your local Time<br>(Vietnam)</th>
+              <th>Location</th>
+              <th>Duration</th>
+              <th></th>
+            </tr>
+          </thead>
 
-        <tbody>
-          <tr>
-            <td>Monday</td>
-            <td>TO DO</td>
-            <td>TO DO</td>
-            <td>TO DO</td>
-            <td>TO DO</td>
-          </tr>
-          <tr>
-            <td>Tuesday</td>
-            <td>TO DO</td>
-            <td>TO DO</td>
-            <td>TO DO</td>
-            <td>TO DO</td>
-          </tr>
-          <tr>
-            <td>Wednesday</td>
-            <td>TO DO</td>
-            <td>TO DO</td>
-            <td>TO DO</td>
-            <td>TO DO</td>
-          </tr>
-          <tr>
-            <td>Thursday</td>
-            <td>TO DO</td>
-            <td>TO DO</td>
-            <td>TO DO</td>
-            <td>TO DO</td>
-          </tr>
-          <tr>
-            <td>Friday</td>
-            <td>TO DO</td>
-            <td>TO DO</td>
-            <td>TO DO</td>
-            <td>TO DO</td>
-          </tr>
-          <tr>
-            <td>Saturday</td>
-            <td>TO DO</td>
-            <td>TO DO</td>
-            <td>TO DO</td>
-            <td>TO DO</td>
-          </tr>
-          <tr>
-            <td>Sunday</td>
-            <td>TO DO</td>
-            <td>TO DO</td>
-            <td>TO DO</td>
-            <td>TO DO</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+          <tbody>
+            <tr *ngFor="let event of shadeEvent.baseEvents">
+              <td>{{weekdays[event.date.getDay()]}}</td>
+              <td>{{event.date.toLocaleTimeString()}}</td>
+              <td>{{event.date.toLocaleTimeString()}}</td>
+              <td>{{event.location}}</td>
+              <td>{{event.duration/3600}} hours</td>
+              <td>{{event.status}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
-    <!-- Share section -->
-    <div class="v-container-sharing">
-      <h3>Share this event:</h3>
-      <a href="#">http://######</a>
+      <!-- Modify -->
+      <div class="v-container-modify">
+        <a href="#">Modify this event</a>
+      </div>
+
+      <!-- Share section -->
+      <div class="v-container-sharing">
+        <h3>Share this event:</h3>
+        <a href="#">http://######</a>
+      </div>
     </div>
   </div>
 <app-footer></app-footer>

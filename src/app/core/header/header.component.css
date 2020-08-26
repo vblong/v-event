@@ -16,11 +16,15 @@
   color: #ffffff;
   text-decoration: none;
   margin: 0 10px;
-  padding: 10px;
+  padding: 5px 25px;
   transition: all .5s ease;
+  border: 1px solid #ffffff;
+  border-radius: 25px;
+  font-weight: 400px;
 }
 
 .v-header-login-item:hover {
   color: #000;
   background-color: #ffffff;
+  border: 1px solid #000000;
 }
